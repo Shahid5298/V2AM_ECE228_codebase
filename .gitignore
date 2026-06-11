@@ -1,0 +1,60 @@
+# ── Large artifacts (kept locally, never pushed) ─────────────────────────────
+checkpoint/
+outputs/
+ablation_results/
+logs/
+extra/
+data/
+
+# Model weights / large binaries
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.onnx
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.pkl
+
+# Generated media
+*.mp4
+*.avi
+*.mov
+*.webm
+*.gif
+
+# ── Caches / experiment trackers ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+**/wandb/
+.ipynb_checkpoints/
+
+# ── AI assistant / editor artifacts (do not publish) ─────────────────────────
+CLAUDE.md
+**/CLAUDE.md
+.claude/
+**/.claude/
+AGENTS.md
+.cursor/
+.cursorrules
+.aider*
+.github/copilot-instructions.md
+
+# ── Python packaging / envs ──────────────────────────────────────────────────
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.uv/
+uv.lock
+
+# ── OS / editor cruft ────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+.idea/
+.vscode/
