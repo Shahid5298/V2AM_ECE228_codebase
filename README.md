@@ -16,32 +16,32 @@ manipulation tasks (coffee-pod insertion, cube stacking, stack-three, …).
 
 ```
                  ┌──────────────────────────────────────────────────────────┐
-   MimicGen   →  │ STAGE 0  Data preparation (download + convert to Parquet) │ → demo data
-   (HuggingFace) │          0_data_preparation/                              │
+   MimicGen   →  │ STAGE 0  Data preparation (download + convert to Parquet)│ → demo data
+   (HuggingFace) │          0_data_preparation/                             │
                  └──────────────────────────────────────────────────────────┘
                                         │
                                         ▼
                  ┌──────────────────────────────────────────────────────────┐
-   raw camera →  │ STAGE 1  Video model (i2v) LoRA fine-tuning               │ → imagined
-   frame +       │          1_video_finetuning/                              │   future frames
+   raw camera →  │ STAGE 1  Video model (i2v) LoRA fine-tuning              │ → imagined
+   frame +       │          1_video_finetuning/                             │   future frames
    task prompt   └──────────────────────────────────────────────────────────┘
                                         │
                                         ▼
                  ┌──────────────────────────────────────────────────────────┐
-   frames     →  │ STAGE 2  VideoMAE features  +  flow-matching action head  │ → 16-step
-   + proprio     │          src/  +  2_action_head_training/                 │   action chunk
+   frames     →  │ STAGE 2  VideoMAE features  +  flow-matching action head │ → 16-step
+   + proprio     │          src/  +  2_action_head_training/                │   action chunk
                  └──────────────────────────────────────────────────────────┘
                                         │
                                         ▼
                  ┌──────────────────────────────────────────────────────────┐
-                 │ STAGE 3  Ablation & evaluation                            │ → MSE / R² /
-                 │          3_ablation_eval/                                  │   jerk / success
+                 │ STAGE 3  Ablation & evaluation                           │ → MSE / R² /
+                 │          3_ablation_eval/                                │   jerk / success
                  └──────────────────────────────────────────────────────────┘
                                         │
                                         ▼
                  ┌──────────────────────────────────────────────────────────┐
-                 │ STAGE 4  Visualization of imagined rollouts               │ → side-by-side
-                 │          4_visualization/                                 │   videos
+                 │ STAGE 4  Visualization of imagined rollouts              │ → side-by-side
+                 │          4_visualization/                                │   videos
                  └──────────────────────────────────────────────────────────┘
 ```
 
